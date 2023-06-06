@@ -2,15 +2,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        
-        long n = new Scanner(System.in).nextLong();
-        long answer = 0;
-        
-        while (n > 0) {
-            answer += n;
-            n--;
+        int count = new Scanner(System.in).nextInt();
+        long answer = 0L;
+        for (int i = 1; i <= count; i++) {
+            answer += i;
         }
-        
         System.out.println(answer);
     }
 }
