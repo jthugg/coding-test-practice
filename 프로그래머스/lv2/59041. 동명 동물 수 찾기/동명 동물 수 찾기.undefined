@@ -1,0 +1,18 @@
+select
+    *
+from
+    (
+        select
+            NAME,
+            count(NAME) as count
+        from
+            ANIMAL_INS
+        where
+            NAME is not NULL
+        group by
+            NAME
+    ) SUB
+where
+    COUNT > 1
+ORDER BY
+    NAME
